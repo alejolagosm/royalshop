@@ -1,11 +1,15 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './styles.scss';
 
-const CategoryItem = ({ category }) => {
-  const { imageUrl, title, size } = category;
+const MenuItem = ({ title, imageUrl, size, linkUrl }) => {
+  let navigate = useNavigate();
   return (
-    <div className={`category-container ${size}`}>
+    <div
+      className={`category-container ${size}`}
+      onClick={() => navigate(`/shop/${linkUrl}`)}
+    >
       <div
         className="menu-item"
         style={{
@@ -20,4 +24,4 @@ const CategoryItem = ({ category }) => {
   );
 };
 
-export default CategoryItem;
+export default MenuItem;
