@@ -4,20 +4,19 @@ import './App.css';
 import Header from './components/header/header.component';
 import Home from './pages/home/home.component';
 import ShopPage from './pages/shop/shop.component';
-import SignIn from './pages/signing/signing.component';
+import SignIn from './pages/sign_in/signing.component';
 import Collection from './components/collection/collection';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Routes>
+    <Routes>
+      <Route path="/" element={<Header />}>
         <Route path="/" index element={<Home />} />
-        <Route path="/shop" index element={<ShopPage />}></Route>
+        <Route path="/shop" element={<ShopPage />}></Route>
         <Route path="/shop/:category" element={<Collection />} />
-        <Route path="/signin" index element={<SignIn />} />
-      </Routes>
-    </div>
+        <Route path="/sign-in" element={<SignIn />} />
+      </Route>
+    </Routes>
   );
 }
 

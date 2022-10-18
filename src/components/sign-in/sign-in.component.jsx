@@ -33,14 +33,14 @@ function SignIn() {
           name="email"
           type="email"
           handleChange={handleChange}
-          value={email}
+          value={user.email}
           label="email"
           required
         />
         <FormInput
           name="password"
           type="password"
-          value={password}
+          value={user.password}
           handleChange={handleChange}
           label="password"
           required

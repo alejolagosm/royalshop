@@ -1,37 +1,29 @@
 .category-container {
-  min-width: 30%;
-  //height: 240px;
-  aspect-ratio: 2;
+  min-width: 40%;
+  height: 240px;
+  aspect-ratio: 1;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  margin: 10px 15px;
   overflow: hidden;
 
   &:hover {
     cursor: pointer;
 
     & .menu-item {
-      transform: scale(1.1);
-      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      transform: scale(1.2);
+      transition: transform 3s linear;
     }
 
     & .category-body-container {
-      opacity: 0.9;
+      opacity: 1;
     }
   }
 
-  &:first-child {
-    margin-right: 7.5px;
-  }
-
-  &:last-child {
-    margin-left: 7.5px;
-  }
   &.large {
-    min-width: 40%;
+    min-width: 100%;
   }
 
   .menu-item {
@@ -50,7 +42,7 @@
     justify-content: center;
     border: 1px solid black;
     background-color: white;
-    opacity: 0.7;
+    opacity: 0.8;
     position: absolute;
 
     h2 {
